@@ -6,15 +6,17 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+
+  <script src="/index.js" defer></script>
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body class="body-text">
 
-  <!-- Sign-up form start -->
-
-  <main class="card">
-      <article class="newsletter">
+  
+  <main class="page">
+    <!-- Sign-up form start -->
+      <article class="card newsletter">
 
         <div class="newsletter__content">
           <h1 class="headline">Stay updated!</h1>
@@ -28,13 +30,13 @@
           </ul>
         </div>
         
-        <form class="newsletter__form" action="" method="post">
+        <form class="newsletter__form" action="https://httpbin.org/post" method="post">
           <div class="form-row">
             <input type="email" id="email" name="user_email" placeholder="email@company.com" required/>
             <label for="email" class="label-text">Email address</label>
           </div>
           
-          <button type="submit" class="btn btn-text">
+          <button type="submit" class="btn btn-submit btn-text">
             Subscribe to monthly newsletter
           </button>
         </form>
@@ -45,13 +47,13 @@
         <!-- Success message start -->
         <h1 class="headline">Thanks for subscribing!</h1>
         
-        <p>A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
+        <p class="instructions">A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
           Please open it and click the button inside to confirm your subscription.</p>
           
-        <button class="btn btn-text">Dismiss message</button>     
+        <button class="btn btn-text btn-dismiss">Dismiss message</button>     
           <!-- Success message end -->
       </article>
-
     </main>
+
   </body>
 </html>
