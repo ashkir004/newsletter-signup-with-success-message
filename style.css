@@ -226,10 +226,9 @@ input[type='email']:invalid:not(:placeholder-shown) + .label-text:after{
     justify-content: center;
     gap: var(--spacing-400);
     background-color: var(--white);
-    height: 75vh;
+    height: 92vh;
     margin-top: auto;
-    padding-inline: var(--spacing-200);
-    margin-block-end: var(--spacing-800);
+    padding-inline: var(--spacing-300);
 }
 
 .newsletter-success::before {
@@ -238,6 +237,7 @@ input[type='email']:invalid:not(:placeholder-shown) + .label-text:after{
     width: 4rem;
     height: 4rem;
     display: block;
+    margin-top: auto;
 }
 
 .btn-dismiss {
@@ -297,8 +297,6 @@ input[type='email']:invalid:not(:placeholder-shown) + .label-text:after{
         width: 31.5rem;
         border-radius: 2.25rem;
     }
-    
-    
 }
 
 
