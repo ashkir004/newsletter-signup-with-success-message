@@ -169,6 +169,10 @@ body {
     width: 100%;
 }
 
+.label-text {
+    display: inline-block;
+}
+
 .form-row input[type='email'] {
     border: .1rem solid var(--grey);
     border-radius: var(--spacing-100);
@@ -190,11 +194,7 @@ body {
     color: var(--red);
 }
 
-.label-text {
-    display: inline-block;
-}
-
-input[type='email']:invalid:not(:placeholder-shown) + .label-text:after{
+input[type='email']:invalid:not(:placeholder-shown) + .label-text:after {
     content: "Valid email required";
     float: right;
     color: var(--red);

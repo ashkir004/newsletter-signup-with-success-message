@@ -4,20 +4,11 @@ let [newsletterSubscribePage, newsletterSuccessPage] = page.querySelectorAll('.n
 let newsletterForm = newsletterSubscribePage.querySelector('.newsletter__form');
 let subscribe = newsletterSubscribePage.querySelector('.btn-submit');
 let dismissMsg = newsletterSuccessPage.querySelector('.btn-dismiss');
+let email = newsletterSubscribePage.querySelector('.form-row #email');
 
-let formData = {}
+let formData = {};
 
-
-let toggleHidden = () => {
-    [newsletterSubscribePage, newsletterSuccessPage]
-        .forEach((el) => el.classList.toggle('hidden'));
-}
-
-let showSuccessMsg = (e) => {
-    e.preventDefault();
-
-    toggleHidden();
-
+function updateUI() {
     formData = new FormData(newsletterForm);
     let data = Object.fromEntries(formData);
 
@@ -25,12 +16,32 @@ let showSuccessMsg = (e) => {
     showEmail.textContent = data.user_email;
 }
 
-let dismissSuccessMsg = (e) => {
-    formData = {}
-    toggleHidden()
+function toggleHidden() {
+    [newsletterSubscribePage, newsletterSuccessPage]
+        .forEach((el) => el.classList.toggle('hidden'));
 }
+
+function showSuccessMsg() {
+    toggleHidden();
+    updateUI();
+}
+
+function dismissSuccessMsg() {
+    formData = {};
+    toggleHidden();
+}
+
+email.addEventListener('input', () => {
+    if (email.validity.valid) {    
+        subscribe.disabled=false;
+    } else {
+        subscribe.disabled=true;
+    }
+});
+
+newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+});
 
 subscribe.addEventListener('click', showSuccessMsg);
 dismissMsg.addEventListener('click', dismissSuccessMsg);
-
-
