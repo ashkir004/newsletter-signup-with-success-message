@@ -40,6 +40,7 @@ Users should be able to:
 #### Tablet States
 ![](/screenshots/tablet.png)
 ![](/screenshots/tablet-success.png)
+![](/screenshots/tablet-error.png)
 
 #### Desktop States
 ![](/screenshots/desktop.png)
@@ -50,8 +51,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/ashkir004/newsletter-signup-with-success-message](https://github.com/ashkir004/newsletter-signup-with-success-message)
+- Live Site URL: [https://newsletter-sign-up-form-ashkir004.netlify.app/](https://newsletter-sign-up-form-ashkir004.netlify.app/)
 
 ## My process
 
