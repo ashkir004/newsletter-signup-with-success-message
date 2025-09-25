@@ -29,10 +29,13 @@ function showSuccessMsg() {
 function dismissSuccessMsg() {
     formData = {};
     toggleHidden();
+    
+    email.value = '';
+    email.focus();
 }
 
 email.addEventListener('input', () => {
-    if (email.validity.valid) {    
+    if (email.validity.valid) {
         subscribe.disabled=false;
     } else {
         subscribe.disabled=true;
@@ -41,7 +44,12 @@ email.addEventListener('input', () => {
 
 newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    if (email.validity.valid) {
+        showSuccessMsg();
+    } else {
+        email.focus();
+    }
 });
 
-subscribe.addEventListener('click', showSuccessMsg);
 dismissMsg.addEventListener('click', dismissSuccessMsg);
