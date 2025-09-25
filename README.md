@@ -88,6 +88,16 @@ email.addEventListener('input', () => {
         subscribe.disabled = true;
     }
 });
+
+newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (email.validity.valid) {
+        showSuccessMsg();
+    } else {
+        email.focus();
+    }
+});
 ```
 
 ### Continued development
