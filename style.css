@@ -75,12 +75,14 @@ body {
     font-weight: var(--font-regular);
     line-height: var(--line-height-relaxed);
     font-family: var(--font-family);
+    color: var(--blue-800);
 }
 
 .headline {
     font-size: var(--font-lg);
     font-weight: var(--font-bold);
     line-height: var(--line-height-normal);
+    color: var(--blue-800);
 }
 
 .label-text {
@@ -142,7 +144,7 @@ body {
     min-height: 1.3rem;
     align-self: flex-start;
     background: url('/assets/images/icon-list.svg') center center/contain no-repeat;
-    margin-inline-end: var(--spacing-100);
+    margin-inline-end: var(--spacing-200);
     display: block;
 }
 
@@ -179,6 +181,7 @@ body {
     padding: var(--spacing-200) var(--spacing-200);
     font-size: var(--font-md);
     order: 2;
+    color: var(--grey);
 }
 
 .form-row input[type='email']:focus {
