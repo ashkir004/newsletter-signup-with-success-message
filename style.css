@@ -266,7 +266,7 @@ input[type='email']:invalid:not(:placeholder-shown) + .label-text:after {
 
     .card {
         min-width: 38rem;
-        padding: var(--spacing-500);
+        padding: var(--spacing-400);
         border-radius: var(--spacing-500);
     }
 
@@ -306,7 +306,7 @@ input[type='email']:invalid:not(:placeholder-shown) + .label-text:after {
 @media (min-width: 64rem) {
     
     .card {
-        padding: var(--spacing-300);
+        padding: var(--spacing-400);
         border-radius: var(--spacing-300);
     }
     
