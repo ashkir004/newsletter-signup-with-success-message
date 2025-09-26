@@ -32,7 +32,8 @@
         
         <form class="newsletter__form" action="" method="post" novalidate>
           <div class="form-row">
-            <input type="email" id="email" name="user_email" placeholder="email@company.com" required />
+            <input type="email" id="email" name="user_email" 
+                    placeholder="email@company.com" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required />
             <label for="email" class="label-text">Email address</label>
           </div>
           
